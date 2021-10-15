@@ -30,6 +30,7 @@ class FfmpegEncore < Formula
   depends_on "openssl@3"
   depends_on "x264-encore"
   depends_on "x265-encore"
+  depends_on "rav1e"
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
@@ -76,6 +77,7 @@ class FfmpegEncore < Formula
       --enable-libssh
       --enable-libvmaf
       --enable-nonfree
+      --enable-librav1e
     ]
 
     if !build.without? "fdk-aac"
