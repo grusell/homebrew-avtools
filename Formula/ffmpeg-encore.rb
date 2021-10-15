@@ -6,10 +6,9 @@
 class FfmpegEncore < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-4.3.1.tar.xz"
-  sha256 "ad009240d46e307b4e03a213a0f49c11b650e445b1f8be0dda2a9212b34d2ffb"
+  url "https://ffmpeg.org/releases/ffmpeg-4.4.tar.xz"
+  sha256 "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909"
   license "GPL-2.0-only"
-  revision 1
   head "https://github.com/FFmpeg/FFmpeg.git"
 
   option "with-ffplay", "Enable ffplay"
@@ -43,7 +42,9 @@ class FfmpegEncore < Formula
   end
 
   if build.with? "ffplay"
-    depends_on "libxv" unless OS.mac?
+    on_linux do
+      depends_on "libxv"
+    end
     depends_on "sdl2"
   end
 
@@ -85,6 +86,7 @@ class FfmpegEncore < Formula
     end
    
     args << "--enable-ffplay" if build.with? "ffplay"
+
     args << "--enable-videotoolbox" if OS.mac?
    
     # GPL-incompatible libraries, requires ffmpeg to build with "--enable-nonfree" flag, (unredistributable libraries)
