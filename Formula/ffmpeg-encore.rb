@@ -30,6 +30,7 @@ class FfmpegEncore < Formula
   depends_on "x264-encore"
   depends_on "x265-encore"
   depends_on "rav1e"
+  depends_on "svt-av1"
 
   uses_from_macos "bzip2"
   uses_from_macos "zlib"
@@ -79,6 +80,7 @@ class FfmpegEncore < Formula
       --enable-libvmaf
       --enable-nonfree
       --enable-librav1e
+      --enable-libsvtav1
     ]
 
     if !build.without? "fdk-aac"
