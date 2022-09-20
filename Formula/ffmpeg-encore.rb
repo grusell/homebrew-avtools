@@ -9,7 +9,7 @@ class FfmpegEncore < Formula
   url "https://ffmpeg.org/releases/ffmpeg-5.1.tar.xz"
   sha256 "55eb6aab5ee235550fa54a33eaf8bf1b4ec66c01453182b12f6a993d75698b03"
   license "GPL-3.0-or-later"
-  head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
+  head "https://github.com/grusell/FFmpeg.git", branch: "svt-av1"
 
   bottle do
     root_url "https://github.com/svt/homebrew-avtools/releases/download/ffmpeg-encore-5.1"
