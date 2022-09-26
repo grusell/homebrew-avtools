@@ -6,10 +6,10 @@
 class FfmpegEncore < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-5.1.tar.xz"
-  sha256 "55eb6aab5ee235550fa54a33eaf8bf1b4ec66c01453182b12f6a993d75698b03"
+  url "https://github.com/grusell/FFmpeg/archive/refs/tags/5.1.1-svtav1-1.tar.gz"
+  sha256 "61642a9a93bb53bb3c218a1f9409cc2c3f16286319baace60b28789944045bf5"
   license "GPL-3.0-or-later"
-  head "https://github.com/grusell/FFmpeg.git", branch: "svt-av1"
+  head "https://github.com/grusell/FFmpeg.git", branch: "5.1.1-svt-av1"
 
   bottle do
     root_url "https://github.com/svt/homebrew-avtools/releases/download/ffmpeg-encore-5.1"
